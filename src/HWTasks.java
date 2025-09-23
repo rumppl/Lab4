@@ -3,7 +3,7 @@ public class HWTasks {
 
         //RescursiveWorld(6);
 
-        System.out.println(SumOfMult7s(1,49));
+        SumOfMult7s(1,49,0);
 
     }
     static void RescursiveWorld(int n) { // a function that prints "Hello World" n times recursively.
@@ -13,23 +13,16 @@ public class HWTasks {
         }
     }
 
-    static int SumOfMult7s(int min, int max){ // a function that returns the sum of all numbers between n1 and n2 that are multiples of 7 using recursion.
-        int x = min;
+    static void SumOfMult7s(int min, int max, int sum){ // a function that returns the sum of all numbers between n1 and n2 that are multiples of 7 using recursion.
+        int multiple = min;                           // FIXME how do i keep a sum between calls without a param??????
 
-        if(x <= max){
-            if(x % 7 == 0){
-                System.out.println(x);
+        if(multiple <= max){
+            if(multiple % 7 == 0){
+                sum += multiple;
+                System.out.println(sum);
             }
-            return SumOfMult7s(min+1, max);
+            SumOfMult7s(min+1, max, sum);
         }
-        return 0;
     }
 
-
-    static int testSum(int[] myArr, int n){
-        if(n <= myArr.length){
-
-        }
-        return 0;
-    }
 }
