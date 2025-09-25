@@ -1,13 +1,15 @@
 public class HWTasks {
     public static void main(String[] args) {
 
-        //RescursiveWorld(6);
+        RescursiveWorld(6);
 
-        System.out.println(SumOfMult7s(0,300));
+        int min = 0;
+        int max = 49;
+        System.out.println("The sum of all multiples of 7 between " + min + " and " + max + " is: " + SumOfMult7s(0,49));
 
-        //int[] myArr = {1,7,9,25,31,55};
+        int[] myArr = {1,7,9,25,31,55};
 
-        //System.out.println("keyValue is located at index: " + RecursiveBinarySearch(myArr, 9));
+        System.out.println("keyValue is located at index: " + RecursiveBinarySearch(myArr, 9));
 
     }
     static void RescursiveWorld(int n) { // a function that prints "Hello World" n times recursively.
@@ -24,8 +26,8 @@ public class HWTasks {
     }
 
     static int SumOfMult7sRecursion(int min, int max, int sum){
-        if(min >= max){
-            return -1;
+        if(min > max){
+            return sum;
         }
 
         int multiple = min;
